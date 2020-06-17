@@ -8,10 +8,10 @@ node('master') {
     // def cosmosDbName = '<your-cosmodb-name>'
     // def dbName = '<your-dbname>'
 
-    // def dockerRegistry = '<your-acr-name>.azurecr.io'
+    def dockerRegistry = 'Dockergunn'
     def imageName = "todo-app:${env.BUILD_NUMBER}"
     env.IMAGE_TAG = "${dockerRegistry}/${imageName}"
-    // def dockerCredentialId = '<your-acr-credential-id>'
+    def dockerCredentialId = 'Dockergunn'
 
     def currentEnvironment = 'blue'
     def newEnvironment = { ->
