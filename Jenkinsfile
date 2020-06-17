@@ -4,14 +4,14 @@ node('master') {
     def resourceGroup = 'vm-rg'
     def aks = 'k8s-bg'
 
-    # def cosmosResourceGroup = '<your-cosmodb-resource-group>'
-    # def cosmosDbName = '<your-cosmodb-name>'
-    # def dbName = '<your-dbname>'
+    // def cosmosResourceGroup = '<your-cosmodb-resource-group>'
+    // def cosmosDbName = '<your-cosmodb-name>'
+    // def dbName = '<your-dbname>'
 
-    # def dockerRegistry = '<your-acr-name>.azurecr.io'
+    // def dockerRegistry = '<your-acr-name>.azurecr.io'
     def imageName = "todo-app:${env.BUILD_NUMBER}"
     env.IMAGE_TAG = "${dockerRegistry}/${imageName}"
-    # def dockerCredentialId = '<your-acr-credential-id>'
+    // def dockerCredentialId = '<your-acr-credential-id>'
 
     def currentEnvironment = 'blue'
     def newEnvironment = { ->
